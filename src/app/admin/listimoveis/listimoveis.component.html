@@ -9,13 +9,42 @@
       <table mat-table [dataSource]="listaimoveis" class="mat-elevation-z8">
 
         <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <th mat-header-cell *matHeaderCellDef> Nome do imóvel </th>
           <td mat-cell *matCellDef="let imovel"> {{imovel.nome}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="category">
-          <th mat-header-cell *matHeaderCellDef> Name </th>
-          <td mat-cell *matCellDef="let imovel"> {{imovel.category}} </td>
+        <ng-container matColumnDef="tipo">
+          <th mat-header-cell *matHeaderCellDef> Tipo do imóvel</th>
+          <td mat-cell *matCellDef="let imovel"> {{imovel.tipo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="valor">
+          <th mat-header-cell *matHeaderCellDef> Valor do imóvel </th>
+          <td mat-cell *matCellDef="let imovel"> R$ {{imovel.valor}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="endereco">
+          <th mat-header-cell *matHeaderCellDef> Endereço </th>
+          <td mat-cell *matCellDef="let imovel"> Rua {{imovel.endereco[0].rua}}, {{imovel.endereco[0].numero}} - {{imovel.endereco[0].bairro}} / {{imovel.endereco[0].cidade}} - {{imovel.endereco[0].uf}} / {{imovel.endereco[0].cep}}  </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+
+          <mat-header-cell *matHeaderCellDef>
+
+          </mat-header-cell>
+
+          <mat-cell *matCellDef="let imovel">
+            <button mat-icon-button  class="buttons-action button-edit" color="primary">
+              <mat-icon>edit</mat-icon>
+              Editar
+            </button>
+            <button mat-icon-button class="buttons-action button-delete" color="warn">
+              <mat-icon>delete</mat-icon>
+              Deletar
+            </button>
+          </mat-cell>
+
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -27,8 +56,9 @@
 
   <section class="adicionar-imoveis">
     <div matTooltip="" class="example-disabled">
-      <button mat-mini-fab  aria-label="Adicionar imovel" class="corprincipal1">
-        <mat-icon>add</mat-icon>
+      <button mat-fab extended class="buttons-action corprincipal1" [routerLink]="['/admin/add']">
+        <mat-icon >add</mat-icon>
+        Adicionar imóvel
       </button>
     </div>
   </section>

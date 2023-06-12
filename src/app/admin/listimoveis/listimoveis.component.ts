@@ -15,7 +15,7 @@ export class ListimoveisComponent  implements OnInit {
 
   listaimoveis: Observable<Imoveis[]>;
 
-  displayedColumns = ['name', 'category'];
+  displayedColumns = ['name','tipo', 'valor', 'endereco', 'actions'];
 
   constructor( private imoveisService: ImoveisService) {
     this.listaimoveis = this.imoveisService.ListImoveisService()
@@ -28,6 +28,14 @@ export class ListimoveisComponent  implements OnInit {
   }
 
   ngOnInit():void{
+
+  }
+
+  removerImovel():void{
+
+  }
+
+  deletarImovel():void {
 
   }
 
