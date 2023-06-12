@@ -1,1 +1,95 @@
-<p>addimoveis works!</p>
+<section>
+  <div class="formulario">
+    <form  [formGroup]="imoveisForm" #formDir="ngForm">
+      <div>
+        <label>Identificação da residência</label>
+        <input type="text" name='nome' placeholder="Digite o nome da casa">
+      </div>
+      <div>
+        <label>Tipo de residência</label>
+        <select type="section" name='nome'>
+          <option value="Casa">Casa</option>
+          <option value="Apartamento">Apartamento</option>
+          <option value="Sítio">Sítio</option>
+          <option value="Comercial">Comercial</option>
+        </select>
+      </div>
+        <div>
+          <label>Valor da residência</label>
+          <input type="number" name='valor'>
+        </div>
+        <div>
+          <label>Valor do condomínio</label>
+          <input type="number" name='condominio'>
+        </div>
+        <div>
+          <label>Quantidade de quartos</label>
+          <input type="number" name='quartos'>
+        </div>
+        <div>
+          <label>Quantidade de banheiros</label>
+          <input type="number" name='banheiros'>
+        </div>
+        <div>
+          <input type="hidden" name='mobiliado'>
+          <label>Apartamento com mobilia?</label>
+            <input type="radio" id="html" name="mobiliado" value="true">
+            <label for="sim">Sim</label><br>
+            <input type="radio" id="css" name="mobiliado" value="false">
+            <label for="nao">Nao</label><br>
+        </div>
+        <div>
+          <label>Tamanho da area da casa</label>
+          <input type="number" name='area'>
+        </div>
+        <div>
+          <p>Please select your favorite Web language:</p>
+            <input type="radio" id="html" name="mobiliado" value="true">
+            <label for="sim">Sim</label><br>
+            <input type="radio" id="css" name="mobiliado" value="false">
+            <label for="nao">Nao</label><br>
+        </div>
+        <div>
+          <p>Please select your favorite Web language:</p>
+            <input type="radio" id="html" name="mobiliado" value="true">
+            <label for="sim">Sim</label><br>
+            <input type="radio" id="css" name="mobiliado" value="false">
+            <label for="nao">Nao</label><br>
+        </div>
+        <div>
+          <label>Valor do condomínio</label>
+          <input type="number" name='cep'>
+        </div>
+        <div>
+          <label>Valor do condomínio</label>
+          <input type="text" name='rua'>
+        </div>
+        <div>
+          <label>Valor do condomínio</label>
+          <input type="string" name='numero'>
+        </div>
+        <div>
+          <label>Valor do condomínio</label>
+          <input type="string" name='bairro'>
+        </div>
+        <div>
+          <label>Valor do condomínio</label>
+          <input type="string" name='cidade'>
+        </div>
+        <div>
+          <label>Cidade</label>
+          <input type="string" name='U'>
+        </div>
+        <div>
+          <label>Valor do condomínio</label>
+          <select type="section" name='nome'>
+            <option value="">&nbsp;</option>
+            <option value="">&nbsp;</option>
+            <option value="">&nbsp;</option>
+            <option value="">&nbsp;</option>
+          </select>
+        </div>
+        <input type="submite">
+    </form>
+  </div>
+</section>

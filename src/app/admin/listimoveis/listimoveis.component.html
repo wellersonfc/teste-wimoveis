@@ -1,1 +1,36 @@
-<p>listimoveis works!</p>
+<div class="container">
+
+  <section class="listagem-imoveis-admin">
+    <div class="titulo-lista-de-imoveis">
+      <h2>Imóveis adicionados ao sistema:</h2>
+    </div>
+
+    <div class="lista-de-imoveis">
+      <table mat-table [dataSource]="listaimoveis" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let imovel"> {{imovel.nome}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let imovel"> {{imovel.category}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+
+  </section>
+
+  <section class="adicionar-imoveis">
+    <div matTooltip="" class="example-disabled">
+      <button mat-mini-fab  aria-label="Adicionar imovel" class="corprincipal1">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </section>
+
+</div>

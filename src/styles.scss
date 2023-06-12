@@ -1,0 +1,36 @@
+@import '@angular/material';
+//@include mat-core();
+
+//cores escolhidas para o projeto
+$corprincipal1: #47444b !important;
+$corprincipal2: #228c80;
+$corprincipal3: #e2690e;
+$corprincipal4: #fdcc0e;
+$corprincipal4: #ffe1bd;
+
+$corBranco: #ffff;
+$corpPreto: #111111;
+
+
+//fonts
+//$textos1:font-family: Madefor;
+
+//tamanhos fonts
+
+$fontPequena:10px;
+$fontMedia: 12.5px;
+$fontGrande: 16px;
+
+
+//espacamentos
+
+.container {
+  display: grid;
+
+  section{
+    flex-direction: column;
+
+  }
+
+
+}
