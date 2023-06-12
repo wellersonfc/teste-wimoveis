@@ -18,7 +18,7 @@ export class ListimoveisComponent  implements OnInit {
   displayedColumns = ['name','tipo', 'valor', 'endereco', 'actions'];
 
   constructor( private imoveisService: ImoveisService) {
-    this.listaimoveis = this.imoveisService.ListImoveisService()
+    this.listaimoveis = this.imoveisService.listImoveisService()
       .pipe(
         catchError( error => {
           console.log('Error:', error)
@@ -31,12 +31,9 @@ export class ListimoveisComponent  implements OnInit {
 
   }
 
-  removerImovel():void{
 
-  }
-
-  deletarImovel():void {
-
+  deletarImovel(id:string) {
+    this.imoveisService.removeImovelService(id).subscribe( resp => console.log(resp));
   }
 
 }

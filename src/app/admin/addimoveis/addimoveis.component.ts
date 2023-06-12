@@ -17,4 +17,9 @@ export class AddimoveisComponent implements OnInit {
   ngOnInit():void{
 
   }
+
+  buscarCep(){
+    console.log("buscarCep");
+  }
+
 }

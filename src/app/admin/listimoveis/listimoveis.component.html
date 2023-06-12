@@ -35,11 +35,11 @@
           </mat-header-cell>
 
           <mat-cell *matCellDef="let imovel">
-            <button mat-icon-button  class="buttons-action button-edit" color="primary">
+            <button mat-icon-button  class="buttons-action button-edit" color="primary" [routerLink]="['/admin/add/']">
               <mat-icon>edit</mat-icon>
               Editar
             </button>
-            <button mat-icon-button class="buttons-action button-delete" color="warn">
+            <button mat-icon-button class="buttons-action button-delete" color="warn" (click)="deletarImovel(imovel.id)">
               <mat-icon>delete</mat-icon>
               Deletar
             </button>
@@ -56,7 +56,7 @@
 
   <section class="adicionar-imoveis">
     <div matTooltip="" class="example-disabled">
-      <button mat-fab extended class="buttons-action corprincipal1" [routerLink]="['/admin/add']">
+      <button  mat-fab extended class="buttons-action corprincipal1" [routerLink]="['/admin/add']">
         <mat-icon >add</mat-icon>
         Adicionar imóvel
       </button>

@@ -24,8 +24,10 @@ table td tr{
   table{
     padding: 10px;
     border-radius: 5px;
-    font-family: 'Wix Madefor Text', sans-serif !important;
-    th, td{
+    th{
+      font-weight: 800;
+      font-family: 'Wix Madefor Text', sans-serif !important;
+    }td{
       font-family: 'Wix Madefor Text', sans-serif !important;
     }
   }

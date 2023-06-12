@@ -12,12 +12,20 @@ export class ImoveisService {
 
   private readonly API = 'http://localhost:5875/imovel'
 
-  ListImoveisService(): Observable<Imoveis[]>{
+  listImoveisService(): Observable<Imoveis[]>{
     return this.http.get<Imoveis[]>(this.API);
   }
 
-  AddImovelService(data:Imoveis) {
+  addImovelService(data:Imoveis) {
      return this.http.post<Imoveis>(this.API,data)
   }
+
+  removeImovelService(id:string) {
+    return this.http.delete<Imoveis>(`${this.API}/${id}`)
+  }
+
+ updateImovelService(id:string) {
+  return this.http.delete<Imoveis>(`${this.API}/${id}`)
+}
 
 }
