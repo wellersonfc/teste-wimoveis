@@ -19,7 +19,7 @@ export class AddimoveisComponent implements OnInit {
   }
 
   buscarCep(){
-    console.log(this.imoveisForm.valueChanges);
+    console.log(this.imoveisForm);
   }
 
 }
